@@ -10,19 +10,19 @@ $(() => {
         })
         
     }
-    function submit(comment, rating) {
+    function submit(comment, value) {
         var hashId = $.url("query");
         console.log({
             hashId,
             comment,
-            rating
+            value
         });
         $.ajax({
             type: "POST",
             url: BASE_URL + "?id=" + hashId,
             dataType: "json",
             data: {
-                rating,
+                value,
                 comment
             },
             success: function (result, status, xhr) {
