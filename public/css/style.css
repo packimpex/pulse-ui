@@ -102,7 +102,7 @@ body {
 .rating {
     unicode-bidi: bidi-override;
     direction: rtl;
-    font-size: 8vmin;
+    font-size: 12vmin;
     color: #a3ba00;
     cursor: pointer;
 }
