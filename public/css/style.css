@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
 }
 
 body {
     margin: 0;
+    font-size: 3em;
 }
 
 .clearfix {
@@ -24,7 +26,6 @@ body {
 .flex-sect {
     
     padding: 100px 0;
-    font-family: Helvetica, serif;
 }
 
 .flex-desc {
@@ -42,14 +43,18 @@ body {
 }
 
 .textarea {
+    font-size: 1em;
     width: 100%;
-    height: 100px;
-    margin-bottom: 15px;
-    padding: 7px 10px;
+    height: 200px;
+    margin: 15px;
+    margin-top: 40px;
+    padding: 20px;
+
     border-radius: 2px;
     color: black;
     background-color: white;
     border: 2px solid #a3ba00;
+    border-radius: 10px;
 }
 
 .label {
@@ -100,22 +105,41 @@ body {
     font-size: 8vmin;
     color: #a3ba00;
     cursor: pointer;
-  }
-  .rating > span {
+}
+
+.rating > span {
     display: inline-block;
     position: relative;
     width: 1.1em;
-  }
-  .rating > span:hover:before,
-  .rating > span:hover ~ span:before {
-     content: "\2605";
-     position: absolute;
-     color: #a3ba00;
-  }
+}
 
-  h1 {
-      text-align: center;
-      font-size: 4em;
-      margin: 0;
-      font-family: Helvetica, serif;
-  }
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+    color: #bcd400 !important;
+}
+
+.rating > span.rating-active:before,
+.rating > span.rating-active:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+    color: #a3ba00;
+}
+
+button {
+    background-color: #a3ba00;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}

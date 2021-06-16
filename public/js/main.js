@@ -1,14 +1,30 @@
 const BASE_URL = "https://api.packimpex.com/webhook/pulse"
 
 $(() => {
+    var value = 0;
     function register() {
         [ 1, 2, 3, 4, 5].forEach( (v, i) => {
             $("#r" + v).on("click", () => {
-                var comment = $("#comment").val();
-                submit(comment, v);
+                setValue(v);
             });
         })
         
+        $("#submit").on("click", () => {
+            var comment = $("#comment").val();
+            var myValue = value;
+            submit(comment, myValue);
+        });
+
+    }
+    function setValue(newV) {
+        value = newV;
+        [ 1, 2, 3, 4, 5].forEach( (v, i) => {
+            if (newV >= v) {
+                $("#r" + v).addClass("rating-active");
+            } else {
+                $("#r" + v).removeClass("rating-active");
+            }
+        })
     }
     function submit(comment, value) {
         var hashId = $.url("query");
