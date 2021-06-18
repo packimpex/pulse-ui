@@ -12,7 +12,7 @@ $(() => {
         $("#submit").on("click", () => {
             var comment = $("#comment").val();
             var myValue = value;
-            submit(comment, myValue;)p
+            submit(comment, myValue);
     });
 
     }
